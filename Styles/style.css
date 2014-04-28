@@ -1,0 +1,1515 @@
+img {
+	border-style: none;
+    border-color: inherit;
+    border-width: medium;
+    text-align: center;
+    margin-left: 18px;
+}
+
+/* dock - top */
+.dockPos {
+	/*position: absolute;*/
+		margin-left: auto;
+	margin-right: 0px;
+	position: absolute;
+	top:165px; 
+	left:10px;
+ background-image: url('../Fondos/grisdifuminado.jpg');
+background-repeat: repeat;
+    height: 1335px;
+    width: 120px;
+}
+.dockPos2 {
+	/*position: absolute;*/
+		margin-left: auto;
+	margin-right: 0px;
+	position: absolute;
+	top:130px; 
+	/*left:10px;*/
+	left:-1px;
+    height: 360px;
+}
+.spannoline {
+white-space:nowrap;
+color:  Navy;
+text-align:right;
+}
+.dock {
+	position: relative; 
+	height: 5px; 
+	width:100;
+	text-align: right;
+}
+.dock-container {
+	position: absolute;
+	height: 50px;
+	background: url(../images/dock-bg2.png);
+	padding-left: 20px;
+	
+	
+	 background-color: black;
+
+    border-style: solid solid none solid;
+    border-width: 2px;
+    clear: both;
+    color: #00FF99;
+    cursor: pointer;
+    float: right;
+    font-size: 1em;
+    padding: 2px;
+    
+    width: 110px;
+    top: 45%;
+    right: 84%;
+    text-align: center;
+    -ms-transform:rotate(-90deg);
+    -webkit-transform:rotate(-90deg);
+
+    z-index: 150;
+}
+a.dock-item {
+	display: block;
+	width: 50px;
+	color: #000;
+	position: absolute;
+	top: 0px;
+	text-align: center;
+	text-decoration: none;
+	font: bold 12px Arial, Helvetica, sans-serif;
+    -webkit-transform:rotate(-270deg);
+}
+.dock-item img {
+	border: none; 
+	margin: 5px 10px 0px; 
+	width: 100%; 
+}
+.dock-item span {
+	display: none; 
+	padding-left: 20px;
+}
+
+/* dock2 - bottom */
+#dock2 {
+	width: 100%;
+	bottom: 0px;
+	position: absolute;
+	left: 0px;
+}
+.dock-container2 {
+	position: absolute;
+	height: 50px;
+	background: url(images/dock-bg.png);
+	padding-left: 20px;
+}
+a.dock-item2 {
+	display: block; 
+	font: bold 12px Arial, Helvetica, sans-serif;
+	width: 40px; 
+	color: #000; 
+	bottom: 0px; 
+	position: absolute;
+	text-align: center;
+	text-decoration: none;
+}
+.dock-item2 span {
+	display: none;
+	padding-left: 200px;
+}
+.dock-item2 img {
+	border: none; 
+	margin: 5px 10px 0px; 
+	width: 100%; 
+}
+.labelTipoletra
+{
+  font-family:Arial;
+}
+/*aqui inicia encabezado*/
+ .POSICIONDIVS
+             {
+                 float:left;
+font-family: 'Titillium Web', sans-serif;
+font-weight: 900;
+
+font-size: 42px;
+text-transform: uppercase;
+overflow: hidden;
+
+position: relative;
+top: -144px;
+
+width: 215px;
+             }
+
+             
+      
+ .header
+{
+color: white;
+			padding: 30px;
+			font-size: 32px;
+			
+			/*CSS3*/
+			/*
+			border-radius: 25px;
+			-moz-border-radius: 25px;
+			text-shadow: 5px 5px 5px #000;
+			box-shadow: 10px 10px 5px #000;
+			*/
+-moz-border-radius: 25px;
+text-shadow: 5px 5px 5px #000;
+box-shadow: 10px 10px 5px #000;
+background-image: url('../Fondos/degradado2.jpg');
+
+background-repeat: repeat;
+
+width:778px; height:184px; 
+position:relative;
+/*margin-left: auto; margin-right: auto;  */
+
+}
+
+ .header2
+{
+color: white;
+font-size: 32px;
+padding: 15px 0;
+position: relative;	
+
+-moz-border-radius: 25px;
+text-shadow: 5px 5px 5px #000;
+box-shadow: 10px 10px 5px #000;
+background-image: url('../Fondos/degradado2.jpg');
+
+background-repeat: repeat;
+
+top: 0;
+bottom: 14px;
+/*height:184px;*/ 
+width: 9999px;
+
+display: block;
+font-size: 1.5em;
+-webkit-margin-before: 0.83em;
+-webkit-margin-after: 0.83em;
+-webkit-margin-start: 0px;
+-webkit-margin-end: 0px;
+font-weight: bold;
+
+ margin-left: -15px!important;
+ margin-top:-1px!important;
+    margin-right: 0;
+    margin-bottom: 20px;
+}
+.Contenido
+{
+   width:255px;
+    position:relative;
+    padding:13px 0 0;
+
+  margin-left: auto;
+ margin-right:auto;
+     left:-200px;
+    top: 0px;
+}
+.ContenidoVisualizacionFactura
+{
+   width:155px;
+    position:relative;
+    padding:13px 0 0;
+
+ 
+
+     left:-10px;
+    top: 85px;
+}
+{
+   width:778px;
+    position:relative;
+    padding:13px 0 0;
+
+
+  margin-left: auto;
+ margin-right:auto ;
+     left:100px;
+
+}
+{
+   width:778px;
+    position:relative;
+    padding:13px 0 0;
+
+
+  margin-left: auto;
+ margin-right:auto ;
+     left:100px;
+
+}
+.ContenidoMenus 
+{
+    position:relative;
+    padding:13px 0 0;
+ margin-left: auto;
+ margin-right:auto ;
+}
+        .ContenidoMenuAltas
+        {
+            position:relative;
+            padding:13px 0 0;
+            margin-left: auto;
+            margin-right:auto;
+top: -20px; left: 125px; height: 15px;
+            width: 23px;
+}
+  .ContenidoModFolioConfig
+        {
+            position:relative;
+            padding:13px 0 0;
+
+      
+top: 20px; left: 100px; height: 15px;
+            width: 23px;
+}
+.margenIMgTitulo
+{
+      margin-left: auto;
+ margin-right:auto ;
+    }
+    .DivBuscarboton
+    {position: absolute; top: 197px; left: 210px; width: 300px;height: 75px; }
+ .formularioLogin
+ {
+   
+       
+ }
+.info
+{
+   
+    float:left;
+font-family: 'Titillium Web', Arial;
+font-weight: 900;
+
+font-size: 42px;
+text-transform: uppercase;
+overflow: hidden;
+
+position: relative;
+/*top: -239px;*/
+top: 100px;
+width: 215px;
+    
+    }
+
+.menu {
+  float: left;
+  width: 150px;
+}
+
+.contenido2 {
+  float: left;
+  width: 85%;
+}
+
+.tituloserie a 
+{
+    
+transition: color 0.2s ease;
+position: relative;
+top: 6px;
+color: rgba(255, 255, 255, 0.8);
+}
+.PosLabelFacturar
+{
+  
+    top: 15px;
+     left: 270px;
+    width: 391px;
+}
+
+
+/*000000000000000000000000000000000000000000*/
+#contenedor {
+  width: 1700px;
+   height: 110px;
+   background-image: url('../Fondos/degradado2.jpg');
+
+background-repeat: repeat;
+}
+
+.div-border { 
+border-left: 1px solid #ccc; 
+width:2px; 
+height:50000px; 
+position:fixed;
+	top:120px; 
+	left:120px;
+} 
+
+.div-borderWFDefault { 
+border-left: 1px solid #ccc; 
+width:2px; 
+height:300px; 
+position: absolute;
+	top:41px; 
+	left:305px;
+
+} 
+.div-borderH  
+{
+   /*
+ border-right: 1px solid #ccc; 
+width:2px; 
+height:50000px; 
+position:fixed;
+	top:120px; 
+	left:170px;
+	-webkit-transform:rotate(-240deg);*/
+} 
+
+
+.tb5 {
+	border:2px solid #456879;
+	border-radius:5px;
+	margin-bottom: 0px;
+}
+ #DivDatosUserPrincipal
+            {position: absolute; height: 25px; 
+
+top: 130px;
+           }
+            
+        .DivDatosUserArticulo
+            {position: absolute; height: 30px; width: 660px; top: 120px;
+            left: 460px;
+        }
+                .DivDatosUserFcliente
+                 {position: absolute; height: 30px; width: 660px; top: 120px;
+                 left: 455px;
+                 }
+.DivBusquedaEmpresa
+{position: absolute; top: 330px; 
+left: 210px; width: 300px;
+        height: 75px;
+}
+.DivBusquedaFormCliente
+{position: absolute; top: 325px; 
+left: 270px; 
+width: 300px;
+        height: 75px;
+}
+.tbBusqueda 
+{
+    background:#FFFFFF url(../Images/search.png) no-repeat 4px 4px;
+	padding:4px 4px 4px 22px;
+	border:2px solid #456879;
+	border-radius:5px;
+	}
+.DivBotonesNavegacion
+	{position: absolute; top: 330px; 
+left: 575px; height: 60px;
+        width: 155px;
+}
+        .DivBotonesNavegacionFCliente
+        {
+          
+position: absolute; top: 305px; 
+left: 435px; 
+height: 75px;
+width: 540px;
+            }
+.DivBotonAltas
+{position: absolute; top: 270px; 
+left: 845px; 
+height: 115px;
+        width: 225px;
+}
+        .DivBotonAltasFcliente
+{position: absolute; top: 250px; 
+left: 1000px;
+height: 115px;
+        width: 225px;
+}
+.tb5solonumeros {border:2px solid #456879; border-radius:5px;}
+.DivGridMenu
+{}
+
+	
+.labeBlock
+{
+   font-family:Arial;
+  display: block;
+  margin: .5em 0 0 0;
+}
+.TextboxBlock/* color azul boton*/
+ {
+
+	background-color:#3d94f6;
+	-webkit-border-top-left-radius:0px;
+	-moz-border-radius-topleft:0px;
+
+	-webkit-border-top-right-radius:0px;
+	-moz-border-radius-topright:0px;
+	-webkit-border-bottom-right-radius:0px;
+	-moz-border-radius-bottomright:0px;
+
+	-webkit-border-bottom-left-radius:0px;
+	-moz-border-radius-bottomleft:0px;
+
+	text-indent:0;
+	border:1px solid #337fed;
+	display:inline-block;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	font-style:normal;
+	/*height:26px;*/
+	line-height:26px;
+	/*width:118px;*/
+	text-decoration:none;
+	text-align:center;
+
+	vertical-align:top;
+	display: block;
+	/*alinea enmedio div*/
+	margin-left: auto;
+ margin-right: auto;
+	
+}
+.TextboxBlock:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #1e62d0), color-stop(1, #3d94f6) );
+	background:-moz-linear-gradient( center top, #1e62d0 5%, #3d94f6 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#1e62d0', endColorstr='#3d94f6');
+	background-color:#1e62d0;
+}.TextboxBlock:active {
+	position:relative;
+	top:1px;
+}
+
+.TextboxBlockw /* color azul boton*/
+ {
+
+	background-color:#3d94f6;
+	-webkit-border-top-left-radius:0px;
+	-moz-border-radius-topleft:0px;
+
+	-webkit-border-top-right-radius:0px;
+	-moz-border-radius-topright:0px;
+	-webkit-border-bottom-right-radius:0px;
+	-moz-border-radius-bottomright:0px;
+
+	-webkit-border-bottom-left-radius:0px;
+	-moz-border-radius-bottomleft:0px;
+
+	text-indent:0;
+	border:1px solid #337fed;
+	display:inline-block;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	font-style:normal;
+	/*height:26px;*/
+	line-height:26px;
+	/*width:118px;*/
+	text-decoration:none;
+	text-align:center;
+
+	vertical-align:top;
+	display: block;
+	/*alinea enmedio div*/
+	margin-left: auto;
+ margin-right: auto;
+	
+}
+.TextboxBlockw:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #1e62d0), color-stop(1, #3d94f6) );
+	background:-moz-linear-gradient( center top, #1e62d0 5%, #3d94f6 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#1e62d0', endColorstr='#3d94f6');
+	background-color:#1e62d0;
+}.TextboxBlockw:active {
+	position:relative;
+	top:1px;
+}
+
+
+.TextboxBlockAceptar {
+	-moz-box-shadow:inset 0px 1px 0px 0px #bee2f9;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #bee2f9;
+	box-shadow:inset 0px 1px 0px 0px #bee2f9;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #63b8ee), color-stop(1, #468ccf) );
+	background:-moz-linear-gradient( center top, #63b8ee 5%, #468ccf 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#63b8ee', endColorstr='#468ccf');
+	background-color:#63b8ee;
+	-webkit-border-top-left-radius:0px;
+	-moz-border-radius-topleft:0px;
+	border-top-left-radius:0px;
+	-webkit-border-top-right-radius:0px;
+	-moz-border-radius-topright:0px;
+	border-top-right-radius:0px;
+	-webkit-border-bottom-right-radius:0px;
+	-moz-border-radius-bottomright:0px;
+	border-bottom-right-radius:0px;
+	-webkit-border-bottom-left-radius:0px;
+	-moz-border-radius-bottomleft:0px;
+	border-bottom-left-radius:0px;
+	text-indent:0px;
+	border:1px solid #3866a3;
+	display:inline-block;
+	color:#14396a;
+	font-family:Arial;
+	font-size:12px;
+	font-weight:bold;
+	font-style:normal;
+	height:30px;
+	line-height:30px;
+	width:86px;
+	text-decoration:none;
+	text-align:center;
+	text-shadow:1px 1px 0px #7cacde;
+}
+.TextboxBlockAceptar:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #468ccf), color-stop(1, #63b8ee) );
+	background:-moz-linear-gradient( center top, #468ccf 5%, #63b8ee 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#468ccf', endColorstr='#63b8ee');
+	background-color:#468ccf;
+}.TextboxBlockAceptar:active {
+	position:relative;
+	top:1px;
+}
+
+
+.TextboxBlockCancelar {
+	-moz-box-shadow:inset 0px 1px 0px 0px #f5978e;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #f5978e;
+	box-shadow:inset 0px 1px 0px 0px #f5978e;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #f24537), color-stop(1, #c62d1f) );
+	background:-moz-linear-gradient( center top, #f24537 5%, #c62d1f 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f24537', endColorstr='#c62d1f');
+	background-color:#f24537;
+	-webkit-border-top-left-radius:0px;
+	-moz-border-radius-topleft:0px;
+	border-top-left-radius:0px;
+	-webkit-border-top-right-radius:0px;
+	-moz-border-radius-topright:0px;
+	border-top-right-radius:0px;
+	-webkit-border-bottom-right-radius:0px;
+	-moz-border-radius-bottomright:0px;
+	border-bottom-right-radius:0px;
+	-webkit-border-bottom-left-radius:0px;
+	-moz-border-radius-bottomleft:0px;
+	border-bottom-left-radius:0px;
+	text-indent:0px;
+	border:1px solid #d02718;
+	display:inline-block;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:12px;
+	font-weight:bold;
+	font-style:normal;
+	height:30px;
+	line-height:30px;
+	width:86px;
+	text-decoration:none;
+	text-align:center;
+	text-shadow:1px 1px 0px #810e05;
+}
+.TextboxBlockCancelar:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #c62d1f), color-stop(1, #f24537) );
+	background:-moz-linear-gradient( center top, #c62d1f 5%, #f24537 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#c62d1f', endColorstr='#f24537');
+	background-color:#c62d1f;
+}.TextboxBlockCancelar:active {
+	position:relative;
+	top:1px;
+}
+
+
+.botongrid {
+	-moz-box-shadow:inset 0px 1px 0px 0px #bee2f9;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #bee2f9;
+	
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #63b8ee), color-stop(1, #468ccf) );
+	background:-moz-linear-gradient( center top, #63b8ee 5%, #468ccf 100% );
+
+	background-color:#63b8ee;
+	-webkit-border-top-left-radius:0px;
+	-moz-border-radius-topleft:0px;
+	
+	-webkit-border-top-right-radius:0px;
+	-moz-border-radius-topright:0px;
+	
+	-webkit-border-bottom-right-radius:0px;
+	-moz-border-radius-bottomright:0px;
+	
+	-webkit-border-bottom-left-radius:0px;
+	-moz-border-radius-bottomleft:0px;
+
+	text-indent:0px;
+	border:1px solid #3866a3;
+	display:inline-block;
+	color:#14396a;
+	font-family:Arial;
+	font-size:12px;
+	font-weight:bold;
+	font-style:normal;
+	height:25px;
+	line-height:30px;
+	width:100px;
+	text-decoration:none;
+	text-align:center;
+
+}
+.botongrid:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #468ccf), color-stop(1, #63b8ee) );
+	background:-moz-linear-gradient( center top, #468ccf 5%, #63b8ee 100% );
+	
+	background-color:#468ccf;
+}.botongrid:active {
+	position:relative;
+	top:1px;
+}
+
+
+.TextboxBlockTimbrado {
+-moz-box-shadow:inset 0px 1px 0px 0px #cae3fc;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #cae3fc;
+	box-shadow:inset 0px 1px 0px 0px #cae3fc;
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#79bbff', endColorstr='#a9e2f3');
+	background-color:#79bbff;
+	-webkit-border-top-left-radius:0px;
+	-moz-border-radius-topleft:0px;
+	border-top-left-radius:0px;
+	-webkit-border-top-right-radius:0px;
+	-moz-border-radius-topright:0px;
+	border-top-right-radius:0px;
+	-webkit-border-bottom-right-radius:0px;
+	-moz-border-radius-bottomright:0px;
+	border-bottom-right-radius:0px;
+	-webkit-border-bottom-left-radius:0px;
+	-moz-border-radius-bottomleft:0px;
+	border-bottom-left-radius:0px;
+	text-indent:0px;
+	border:1px solid #469df5;
+	display:inline-block;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:14px;
+	font-weight:bold;
+	font-style:normal;
+	line-height:55px;
+	text-decoration:none;
+	text-align:center;
+	text-shadow:1px -1px 0px #287ace;
+    margin-top: 0px;
+}
+.TextboxBlockTimbrado:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #3866a3), color-stop(1, #3866a3) );
+	background:-moz-linear-gradient( center top, #3866a3 5%, #3866a3 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#468ccf', endColorstr='#63b8ee');
+	background-color:#468ccf;
+}.TextboxBlockTimbrado:active {
+	position:relative;
+	top:1px;
+}
+
+.BotonEnviaCorreo {
+	-moz-box-shadow:inset 0px 1px 0px 0px #c1ed9c;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #c1ed9c;
+	box-shadow:inset 0px 1px 0px 0px #c1ed9c;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #9dce2c), color-stop(1, #8cb82b) );
+	background:-moz-linear-gradient( center top, #9dce2c 5%, #8cb82b 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#9dce2c', endColorstr='#8cb82b');
+	background-color:#9dce2c;
+	-webkit-border-top-left-radius:20px;
+	-moz-border-radius-topleft:20px;
+	border-top-left-radius:20px;
+	-webkit-border-top-right-radius:0px;
+	-moz-border-radius-topright:0px;
+	border-top-right-radius:0px;
+	-webkit-border-bottom-right-radius:20px;
+	-moz-border-radius-bottomright:20px;
+	border-bottom-right-radius:20px;
+	-webkit-border-bottom-left-radius:0px;
+	-moz-border-radius-bottomleft:0px;
+	border-bottom-left-radius:0px;
+	text-indent:0;
+	border:1px solid #83c41a;
+	display:inline-block;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	font-style:normal;
+    height:55px;
+	line-height:55px;
+	width:141px;
+	text-decoration:none;
+	text-align:center;
+	text-shadow:1px 1px 0px #689324;
+}
+.BotonEnviaCorreo:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #8cb82b), color-stop(1, #9dce2c) );
+	background:-moz-linear-gradient( center top, #8cb82b 5%, #9dce2c 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#8cb82b', endColorstr='#9dce2c');
+	background-color:#8cb82b;
+}.BotonEnviaCorreo:active {
+	position:relative;
+	top:1px;
+}
+
+
+
+
+
+.labelTipoletraEnmedio
+{
+      font-family:Arial;
+    	margin-left: auto;
+ margin-right: auto;
+ 
+   margin-right: 0px;top: 50%;
+left: 50%;
+    margin-top: 0px;
+    padding:0px; margin-left: 0px;
+    }
+    
+     p, ul, form, label, h2, h3, h4, img{padding:0px; margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+    }*
+    
+  .BotonGuardar {
+			/*float: left;*/
+			border: 2px gray solid;
+			padding: 10px;
+			margin-right: 5px;
+			margin-bottom: 15px;
+			/*background-image: url('../images/degradado2.jpg');*/
+			background-image: url('../Fondos/negro.png');
+    height: 59px;
+    width: 86px;
+}
+		.BotonGuardar:hover {
+			/*background-color: #F1F1F1;*/
+			/*background-color: #1D0DFF;*/
+			background-color: #3d94f6;
+
+		}
+		    .BotonEnviarCorreo {
+			/*float: left;*/
+			/*border: 2px gray solid;*/
+			padding: 10px;
+			margin-right: 5px;
+			margin-bottom: 15px;
+			/*background-image: url('../images/degradado2.jpg');*/
+			background-image: url('../Fondos/negro.png');
+    height: 85px;
+    width: 100px;
+      cursor:pointer;
+}
+.BotonEnviarCorreo:hover {
+			/*background-color: #F1F1F1;*/
+			/*background-color: #1D0DFF;*/
+			background-color: #3d94f6;
+
+		}
+		    .BotonNuevFactura {
+			/*float: left;*/
+			border: 2px gray solid;
+			padding: 10px;
+			margin-right: 5px;
+			margin-bottom: 15px;
+			/*background-image: url('../images/degradado2.jpg');*/
+			background-image: url('../Fondos/negro.png');
+    height: 59px;
+    width: 100px;
+      cursor:pointer;
+}
+		
+		.BotonNuevFactura:hover {
+			/*background-color: #F1F1F1;*/
+			/*background-color: #1D0DFF;*/
+			background-color: #3d94f6;
+
+		}
+		
+		
+		
+			    .BotonMenuMiPERFIL {
+			/*float: left;*/
+			border: 2px gray solid;
+			padding: 10px;
+			margin-right: 5px;
+			margin-bottom: 15px;
+			top: 50%;
+            left: 50%;
+			/*background-image: url('../images/degradado2.jpg');*/
+			background-image: url('../Fondos/negro.png');
+    height: 85px;
+    width: 86px;
+    cursor:pointer;
+}
+		
+		.BotonMenuMiPERFIL:hover {
+			/*background-color: #F1F1F1;*/
+			/*background-color: #1D0DFF;*/
+			background-color: #3d94f6;
+
+		}
+		
+		    .BotonMenuMisEmpresas {
+			/*float: left;*/
+			border: 2px gray solid;
+			padding: 10px;
+			margin-right: 5px;
+			margin-bottom: 15px;
+			/*background-image: url('../images/degradado2.jpg');*/
+			background-image: url('../Fondos/negro.png');
+    height: 101px;
+    width: 86px;
+      cursor:pointer;
+}
+		
+		.BotonMenuMisEmpresas:hover {
+			/*background-color: #F1F1F1;*/
+			/*background-color: #1D0DFF;*/
+			background-color: #3d94f6;
+
+		}
+		
+		
+			    .BotonMenuClientes {
+			/*float: left;*/
+			border: 2px gray solid;
+			padding: 10px;
+			margin-right: 5px;
+			margin-bottom: 15px;
+			/*background-image: url('../images/degradado2.jpg');*/
+			background-image: url('../Fondos/negro.png');
+    height: 80px;
+    width: 86px;
+      cursor:pointer;
+}
+		
+		.BotonMenuClientes:hover {
+			/*background-color: #F1F1F1;*/
+			/*background-color: #1D0DFF;*/
+			background-color: #3d94f6;
+
+		}
+		
+		.BotonMenuCfdi {
+			/*float: left;*/
+			border: 2px gray solid;
+			padding: 10px;
+			margin-right: 5px;
+			margin-bottom: 15px;
+			/*background-image: url('../images/degradado2.jpg');*/
+			background-image: url('../Fondos/negro.png');
+    height: 110px;
+    width: 86px;
+      cursor:pointer;
+}
+		
+		.BotonMenuCfdi:hover {
+			/*background-color: #F1F1F1;*/
+			/*background-color: #1D0DFF;*/
+			background-color: #3d94f6;
+
+		}
+		
+			.BotonMenuFactura {
+			/*float: left;*/
+			border: 2px gray solid;
+			padding: 10px;
+			margin-right: 5px;
+			margin-bottom: 15px;
+			/*background-image: url('../images/degradado2.jpg');*/
+			background-image: url('../Fondos/negro.png');
+    height: 80px;
+    width: 86px;
+      cursor:pointer;
+}
+		
+		.BotonMenuFactura:hover {
+			/*background-color: #F1F1F1;*/
+			/*background-color: #1D0DFF;*/
+			background-color: #3d94f6;
+
+		}
+		
+			.BotonMenuSalir {
+			/*float: left;*/
+			border: 2px gray solid;
+			padding: 10px;
+			margin-right: 5px;
+			margin-bottom: 15px;
+			/*background-image: url('../images/degradado2.jpg');*/
+			background-image: url('../Fondos/negro.png');
+    height: 80px;
+    width: 86px;
+      cursor:pointer;
+}
+		
+		.BotonMenuSalir:hover {
+			/*background-color: #F1F1F1;*/
+			/*background-color: #1D0DFF;*/
+			background-color: #3d94f6;
+
+		}
+				    .BotonMenuMisArticulos {
+			/*float: left;*/
+			border: 2px gray solid;
+			padding: 10px;
+			margin-right: 5px;
+			margin-bottom: 15px;
+			/*background-image: url('../images/degradado2.jpg');*/
+			background-image: url('../Fondos/negro.png');
+    height: 80px;
+    width: 86px;
+      cursor:pointer;
+}
+		
+		.BotonMenuMisArticulos:hover {
+			/*background-color: #F1F1F1;*/
+			/*background-color: #1D0DFF;*/
+			background-color: #3d94f6;
+
+		}
+		/*=====================================calis=====================*/
+		.cbp-vimenu li a {
+	display: block;
+	text-indent: -500em;
+	height: 5em;
+	width: 5em;
+	line-height: 5em;
+	text-align: center;
+	color: #999;
+	position: relative;
+	border-bottom: 1px solid rgba(0,0,0,0.05);
+	-webkit-transition: background 0.1s ease-in-out;
+	-moz-transition: background 0.1s ease-in-out;
+	transition: background 0.1s ease-in-out;
+}
+
+.cbp-vimenu li a:hover,
+.cbp-vimenu li:first-child a{
+	da;
+	color: #fff;
+}
+
+
+/* class for cff;
+}
+
+/* class for current item */
+.cbp-vimenu li.cbp-vicurrent a {
+	background: #fff;
+	color: #47a3da;
+}
+
+.cbp-vimenu li a:before {
+	font-family: 'ecoico';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	text-indent: 0em;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	font-size: 1.4em;
+	-webkit-font-smoothing: antialiased;
+}
+
+.cbp-vimenu li a.icon-logo:before {
+	content: "C";
+	font-weight: 700;
+	font-size: 300%;
+	font-family: 'Lato', Calibri, Arial, sans-serif;
+}
+.DivBuscarboton
+    {position: absolute; top: 197px; left: 210px; width: 300px;height: 75px; }
+    
+    fieldset {
+    border:1px solid #999;
+    border-radius:8px;
+    box-shadow:0 0 10px #999;
+}
+legend {
+    background:#fff;
+}
+
+/*Probar ´para poner al lado de un label un campo */
+
+labelFielset {
+  float:left;
+  width:25%;
+  margin-right:0.5em;
+  padding-top:0.2em;
+  text-align:right;
+  font-weight:bold;
+  }
+ .DivArticulos {
+    border: black 3px solid; 
+
+    border-radius: 15px;
+  
+}
+
+.botoncerrarArticulos{ 
+  margin-left: 20px; 
+  border: red 2px solid; 
+}
+
+/*===============================================================================*/
+.textboxWizard
+{
+ font-size: large;
+ height:30px;
+ Font-Bold:True;
+ 
+}
+
+.colorAzul
+{
+ background-color: #A9E2F3 !important;    
+
+    }
+    
+@import url(http://fonts.googleapis.com/css?family=Ubuntu);
+
+html {
+	color: #333;
+	font-family: 'Ubuntu', sans-serif;
+}
+
+#wrapper {
+	display: block;
+	margin: 0 auto;
+	width: 1170px;
+}
+
+#header-login-solo {
+	display: inline-block;
+	margin-top: 20px;
+	text-align: right;
+	width: 100%;
+}
+
+.usuario {
+	font-size: 1.2em;
+}
+
+.logout {
+	margin-top: 10px;
+}
+
+.logout a {
+	-moz-border-radius: 5px;
+	-ms-border-radius: 5px;
+	-o-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	background: #dc4a2d;
+	border-radius: 5px;
+	color: #f2f2f2;
+	display: block;
+	float: right;
+	font-size: 0.8em;
+	padding: 10px 12px;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+.logout a:hover {
+	background: #ff5e3e;
+}
+
+#logo {
+	margin: 20px 0;
+	text-align: center;
+}
+
+/* General */
+
+.negritas {
+	font-weight: bold;
+}
+
+.titulos {
+	text-align: center;
+}
+
+.container-solo {
+	margin: 40px 0;
+}
+
+/* Wizards */
+.pasos {
+	-moz-border-radius: 5px;
+	-ms-border-radius: 5px;
+	-o-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	background: #f2f2f2;
+	border-radius: 5px;
+	height: 40px;
+}
+
+.pasos a {
+	color: #333;
+	display: block;
+	float: left;
+	padding: 10px 15px 10px 30px;
+	text-decoration: none;
+	text-transform: uppercase;
+	width: auto;
+}
+
+.pasos a:first-child {
+	-moz-border-bottom-left-radius: 5px ;
+	-moz-border-top-left-radius: 5px ;
+	-ms-border-bottom-left-radius: 5px ;
+	-ms-border-top-left-radius: 5px ;
+	-o-border-bottom-left-radius: 5px ;
+	-o-border-top-left-radius: 5px ;
+	-webkit-border-bottom-left-radius: 5px ;
+	-webkit-border-top-left-radius: 5px ;
+	border-bottom-left-radius: 5px ;
+	border-top-left-radius: 5px ;
+}
+
+.pasos a:hover {
+	background: #dc4a2d;
+	color: white;
+    text-decoration: none;
+    padding: 10px 15px 10px 30px;
+    position: relative;
+    display: block;
+    float: left;
+}
+
+.pasos a:hover:after {
+	border-bottom: 20px solid transparent;
+    border-left: 20px solid #dc4a2d;
+    border-top: 20px solid transparent; /* Go big on the size, and let overflow hide */
+    content: " ";
+    display: block;
+    height: 0;
+    left: 100%;
+    margin-top: -20px;
+    position: absolute;
+    top: 50%;
+    width: 0;
+    z-index: 2;
+}
+
+.pasos a:hover:before {
+	border-bottom: 20px solid transparent;
+    border-left: 20px solid #fff;
+    border-top: 20px solid transparent;
+    content: " ";
+    display: block;
+    height: 0;
+    left: 100%;
+    margin-left: 2px;
+    margin-top: -20px;
+    position: absolute;
+    top: 50%;
+    width: 0;
+    z-index: 1;
+}
+
+.pasos .activo {
+	background: #dc4a2d;
+	color: white;
+    text-decoration: none;
+    padding: 10px 15px 10px 30px;
+    position: relative;
+    display: block;
+    float: left;
+}
+
+.pasos .activo:after {
+    border-bottom: 20px solid transparent;
+    border-left: 20px solid #dc4a2d;
+    border-top: 20px solid transparent; /* Go big on the size, and let overflow hide */
+    content: " ";
+    display: block;
+    height: 0;
+    left: 100%;
+    margin-top: -20px;
+    position: absolute;
+    top: 50%;
+    width: 0;
+    z-index: 2;
+}
+
+.pasos .activo:before {
+    border-bottom: 20px solid transparent;
+    border-left: 20px solid #fff;
+    border-top: 20px solid transparent;
+    content: " ";
+    display: block;
+    height: 0;
+    left: 100%;
+    margin-left: 2px;
+    margin-top: -20px;
+    position: absolute;
+    top: 50%;
+    width: 0;
+    z-index: 1;
+} 
+
+.wiz {
+	margin-top: 40px;
+}
+
+.wiz fieldset {
+	border: 0;
+	box-shadow: none;
+	padding: 5px 50px;
+}
+
+.wiz legend {
+	display: block;
+	font-size: 1.5em;
+	position: relative;
+	text-align: center;
+	width: 100%;
+}
+
+.wiz fieldset div {
+	display: inline-block;
+	margin-top: 10px;
+	width: 100%;
+}
+
+.wiz .trescol div {
+	float: left;
+	margin: 0 10px 0 0;
+	width: 31%;
+}
+
+.wiz .trescol input[type="text"],
+.wiz .trescol input[type="checkbox"], 
+.wiz .trescol input[type="radio"],
+.wiz .trescol select {
+	-moz-border-radius: 5px ;
+	-ms-border-radius: 5px ;
+	-o-border-radius: 5px ;
+	-webkit-border-radius: 5px ;
+	border-radius: 5px ;
+	border: 1px solid #b2b2b2;
+	font-size: 1.1em;
+	padding: 10px 15px;
+	width: 73%;
+}
+
+.wiz .trescol input[type="checkbox"], 
+.wiz .trescol input[type="radio"] {
+	margin-top: 15px;
+}
+
+.wiz .doscol div {
+	float: left;
+	margin: 0 10px 0 0;
+	width: 47.5%;
+}
+
+.wiz .doscol input[type="text"],
+.wiz .doscol select {
+	-moz-border-radius: 5px ;
+	-ms-border-radius: 5px ;
+	-o-border-radius: 5px ;
+	-webkit-border-radius: 5px ;
+	border-radius: 5px ;
+	border: 1px solid #b2b2b2;
+	font-size: 1.1em;
+	padding: 10px 15px;
+	width: 90%;
+}
+
+.wiz .txterror {
+	color: #ff0000;
+	font-weight: bold;
+	font-size: 0.8em;
+}
+
+.wiz .leyenda {
+	float: left;
+	font-size: 0.7em;
+	font-weight: bold;
+	margin: 7px 0 0 5px;
+}
+
+.wiz .wizmoneda label {
+	float: left;
+}
+
+.wiz .txglobal label {
+	float: left;
+}
+
+.wiz label {
+	cursor: pointer;
+	display: inline-block;
+	font-weight: bold;
+	margin-bottom: 5px;
+	padding: 3px 3px 0 0;
+	position: relative;
+}
+
+.wiz input[type="text"],
+.wiz select {
+	-moz-border-radius: 5px ;
+	-ms-border-radius: 5px ;
+	-o-border-radius: 5px ;
+	-webkit-border-radius: 5px ;
+	border-radius: 5px ;
+	border: 1px solid #b2b2b2;
+	font-size: 1.1em;
+	padding: 10px 15px;
+	width: 95%;
+}
+
+.wiz select.estado {
+	width: 86%;
+}
+
+.navegacion {
+	margin-top: 30px;
+}
+
+.navegacion table {
+	margin: 0 auto;
+}
+
+.navegacion input[type="submit"] {
+	-moz-border-radius: 5px;
+	-ms-border-radius: 5px;
+	-o-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	background: #dc4a2d;
+	border-radius: 5px;
+	border: none;
+	color: #fff;
+	display: block;
+	height: 40px;
+	margin-right: 10px;
+	padding: 10px 20px;
+	text-decoration: none;
+	width: 100px;	
+}
+
+/* Pantalla 00 - Registrar Empresa */
+
+#registroempresa {
+	margin: 0 auto;
+	width: 800px;
+}
+
+
+    #wizHeader li .prevStep
+{
+    background-color: #669966;
+}
+#wizHeader li .prevStep:after
+{
+    border-left-color:#669966 !important;
+}
+#wizHeader li .currentStep
+{
+    background-color: #C36615;
+}
+#wizHeader li .currentStep:after
+{
+    border-left-color: #C36615 !important;
+}
+#wizHeader li .nextStep
+{
+    background-color:#C2C2C2;
+}
+#wizHeader li .nextStep:after
+{
+    border-left-color:#C2C2C2 !important;
+}
+#wizHeader
+{
+    list-style: none;
+    overflow: hidden;
+    font: 18px Helvetica, Arial, Sans-Serif;
+    margin: 0px;
+    padding: 0px;
+}
+#wizHeader li
+{
+    float: left;
+}
+#wizHeader li a
+{
+    color: white;
+    text-decoration: none;
+    padding: 10px 0 10px 55px;
+    background: brown; /* fallback color */
+    background: hsla(34,85%,35%,1);
+    position: relative;
+    display: block;
+    float: left;
+}
+#wizHeader li a:after
+{
+    content: " ";
+    display: block;
+    width: 0;
+    height: 0;
+    border-top: 50px solid transparent; /* Go big on the size, and let overflow hide */
+    border-bottom: 50px solid transparent;
+    border-left: 30px solid hsla(34,85%,35%,1);
+    position: absolute;
+    top: 50%;
+    margin-top: -50px;
+    left: 100%;
+    z-index: 2;
+}
+#wizHeader li a:before
+{
+    content: " ";
+    display: block;
+    width: 0;
+    height: 0;
+    border-top: 50px solid transparent;
+    border-bottom: 50px solid transparent;
+    border-left: 30px solid white;
+    position: absolute;
+    top: 50%;
+    margin-top: -50px;
+    margin-left: 1px;
+    left: 100%;
+    z-index: 1;
+}        
+#wizHeader li:first-child a
+{
+    padding-left: 10px;
+}
+#wizHeader li:last-child 
+{
+    padding-right: 50px;
+}
+#wizHeader li a:hover
+{
+    background: #FE9400;
+}
+#wizHeader li a:hover:after
+{
+    border-left-color: #FE9400 !important;
+}        
+.content
+{
+    height:150px;           
+    padding-top:75px;
+    text-align:center;
+    background-color:#F9F9F9;
+    font-size:48px;
+}

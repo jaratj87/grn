@@ -1,0 +1,33 @@
+.tooltip {
+    display: inline;
+    position: relative;
+    opacity: .95;
+   -moz-opacity: .95;
+   filter:alpha(opacity=95);
+  
+
+  }
+  .tooltip:hover:after {
+    /* el formato gráfico */
+    /*bottom:26px;/* cuadrado Encima*/    
+    /*top: 20px; cuadrado debajo*/
+    background: #bc452e;
+    border-radius: 5px;
+    color: #FFF; /* el color del texto */
+    content: attr(original-title); /* este es el texto que será mostrado */
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 0.9em;
+    padding: 6px 15px;
+    position: absolute;
+    right:2%;
+    text-align: center;
+    top:0px;
+    width: 200px;
+    z-index: 500;
+   /*background: rgba(255,255,255, 0.2) ;*/
+
+  }
+  .tooltip:hover:before {
+  
+
+  }
