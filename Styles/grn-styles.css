@@ -45,11 +45,20 @@ header {
 	width: 100%;
 }
 
-header .logo,
-header .logoempresa,
+header .logo {
+	float: left;
+	width: 50%;
+}
+
+header .logoempresa {
+	float: left;
+	text-align: center;
+	width: 25%;
+}
+
 header .datosuser {
 	float: left;
-	width: 33%;
+	width: 25%;
 }
 
 header .logoempresa .empresa {
@@ -1615,7 +1624,7 @@ legend {
 
 .ffilados .fversion {
 	float: left;
-	margin-right: 20px;
+	margin-right: 515px;
 }
 
 .ffilados .ffolios {

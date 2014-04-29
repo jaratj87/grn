@@ -141,10 +141,6 @@
                                     <asp:Label ID="LbTxtEmailUsuario" runat="server" CssClass="negritas" Text="Email: " />
                                     <asp:Label ID="LbEmailUsuario" runat="server" />
                                 </div>
-                                <div class="filas">
-                                    <asp:Label ID="Label66" runat="server" CssClass="negritas" Text="Regimen Fiscal:" />
-                                    <asp:Label ID="LbRegimenFiscal" runat="server" Text="Falta" />
-                                </div>
                             </div>
                         </div>
                         <div class="colderecha">
@@ -189,6 +185,10 @@
                         </div>
                     </div>
                     <div class="ffilados">
+                        <div class="filas">
+                            <asp:Label ID="Label66" runat="server" CssClass="negritas" Text="Regimen Fiscal:" />
+                            <asp:Label ID="LbRegimenFiscal" runat="server" Text="Falta" />
+                        </div>
                         <div class="filas">
                             <div class="fversion">
                                 <asp:Label ID="Label58" runat="server" CssClass="negritas" Text="Versión:" />
