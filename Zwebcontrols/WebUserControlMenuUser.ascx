@@ -6,12 +6,12 @@
     </div>
     <div class="logoempresa">
       <div class="empresa">
-        <span class="negritas">Empresa: <asp:Label ID="LbEmpresaTrabajando" runat="server" /></span>
+        <span class="negritas"><asp:Label ID="LbEmpresaTrabajando" runat="server" Text="GRN Factura Electrónica prueba de empresa seleccionada" /></span>
       </div>
     </div>
     <div class="datosuser">
       <div class="usuario">
-        <span class="negritas">Usuario: <asp:Label ID="LbuserName" runat="server" Text="Label"></asp:Label></span>
+        <span class="negritas">Usuario: <asp:Label ID="LbuserName" runat="server" Text="Benjamín Ramírez Herrera" /></span>
       </div>
       <div class="logout">
           <a href="../ZLogins/Logout.aspx">Cerrar Sesión</a>
