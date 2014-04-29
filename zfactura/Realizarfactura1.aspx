@@ -169,16 +169,27 @@
             }
         }
     </script>
+         <script type="text/javascript">
+             function PaginaPrevPdf() {
+
+                 window.open("CreaPdfPre.aspx", "cal", "scrollbars=no,menubar=no,status=no,width=500 top=500,left=500,top=-300,right=0,height=250,resizable=yes");
+             }
+
+</script>
 </head>
 <body onload="mensaje2()">
     <form id="form1" runat="server">
         <My:UserInfoBoxControl ID="UserInfoBoxControl1" runat="server" />
         <div class="colleft factura">
             <h1 id="tituloPagina" runat="server"><i class="fa fa-file-text-o"></i> Generar Factura</h1>
+            <div id="Div1">
+                <asp:Button ID="Nopostweb" runat="server" BackColor="White" BorderColor="White" ForeColor="White"
+                    Height="0px" ViewStateMode="Enabled" Width="0px" />
+            </div>
             <asp:ScriptManager ID="ScriptManager1" runat="server" EnablePartialRendering="true"></asp:ScriptManager>
             <div class="infoempresa">
                 <div>
-                    <asp:Button ID="Nopostweb" runat="server" ViewStateMode="Enabled" CssClass="oculto" />
+                    <asp:Button ID="Button4" runat="server" ViewStateMode="Enabled" CssClass="oculto" />
                     <asp:Button ID="ButtonDDpago" runat="server" Text="" CssClass="oculto" />
                     <asp:Button ID="btnBusCli" runat="server" Text="" CssClass="oculto" />
                     <asp:Button ID="btnBusArt" runat="server" Text="Button" CssClass="oculto" />
@@ -188,6 +199,7 @@
              <asp:Label ID="apuntador" runat="server"  Text="0" CssClass="oculto" />
             <asp:UpdatePanel ID="UpdatePanel1" runat="server">
                 <ContentTemplate>
+                
                     <div class="erroresdiv">
                         <asp:Label ID="ErrorLbfOLIO" runat="server" CssClass="txterror" Visible="False" />
                     </div>
@@ -207,9 +219,9 @@
                             <asp:Label ID="LbNumCertificado3" AssociatedControlId="txtOrden" runat="server" Text="Orden de compra:" />
                             <asp:TextBox ID="txtOrden" runat="server" />
                         </div>
-                        <div>
+                                 <div>
                             <asp:Label ID="TituloFecha" runat="server" Text="Fecha" CssClass="negritas" /><br />
-                            <asp:Label ID="LbFecha" runat="server" Text="28/04/2014" CssClass="negritas fecha" />
+                            <asp:Label ID="LbFecha" runat="server"   CssClass="negritas fecha" />
                         </div>
                     </div>
                     <div class="infomedia">
@@ -289,7 +301,14 @@
                                     <asp:BoundField DataField="Email" HeaderText="" NullDisplayText="*" SortExpression="FeLlamada">
                                         <ItemStyle Width="0px" Font-Size="0px" />
                                     </asp:BoundField>
-                                    <asp:ButtonField ButtonType="Image" CommandName="Seleccionar" DataTextFormatString="Seleccionar"  HeaderText="Seleccionar" ImageUrl="~/Images/select.png" Text="Seleccionar" />
+ <asp:ButtonField ButtonType="Image" CommandName="Seleccionar" DataTextFormatString="Seleccionar"  HeaderText="Seleccionar" ImageUrl="~/Images/select.png" Text="Seleccionar" />
+<%--                                    <asp:TemplateField ShowHeader="False">
+                                        <ItemTemplate>
+                                            <asp:LinkButton ID="lnkDisplayPopUp" runat="server"   CommandName="Selecciona2" ToolTip="Borrar Articulo"
+                                                OnClientClick="return Action1()" Text='<%# Eval("IdCliente") %>' ><i class="fa fa-trash-o"></i></asp:LinkButton>
+                                                <asp:Button runat="server" CommandName="Delete" OnClientClick="return Action1();" />
+                                        </ItemTemplate>
+                                    </asp:TemplateField>--%>
                                 </Columns>
                                 <EditRowStyle BackColor="#999999" />
                                 <HeaderStyle BackColor="#dc4a2d" Font-Bold="True" ForeColor="#ffffff" />
@@ -355,9 +374,9 @@
                                     <asp:TextBox ID="txtCodOnombre" runat="server" ToolTip="Cod o nombre del Articulo para bucarlo con ENTER" OnTextChanged="txtCodOnombre_TextChanged" placeholder="Enter para aceptar" />
                                 </div>
                                 <div class="nombre">
-                                    <asp:Label ID="LbNombreART0" AssociatedControlId="LbNombreART" runat="server" CssClass="negritas" Text="Nombre del Artículo" />
-                                    <%-- <asp:Label ID="LbNombreART1" runat="server" CssClass="datosarticulo" Text="" Visible="False" /> --%>
-                                    <asp:TextBox ID="LbNombreART" runat="server" Visible="true"></asp:TextBox>
+                                    <asp:Label ID="LbNombreART0" runat="server" CssClass="negritas"></asp:Label><br />
+                                    <asp:Label ID="LbNombreART1" runat="server" CssClass="datosarticulo" Text="" Visible="False" />
+                                    <asp:TextBox ID="LbNombreART" runat="server"  CssClass="datosarticulo" Visible="true"></asp:TextBox>
                                 </div>
                                 <div class="cantidad">
                                     <asp:Label ID="Label49" AssociatedControlId="txtCantidadArt" runat="server" Text="Cantidad" />
@@ -488,10 +507,10 @@
                             <div>
                                 <asp:Label ID="LbError" runat="server" CssClass="txterror" />
                             </div>
-                            <div id="MonedaReferencia" runat="server" class="monedaref">
+                              <div id="MonedaReferencia" runat="server" class="monedaref">
                                 <div>
                                     <asp:Label ID="lbClienteFormaPago" AssociatedControlId="DDLFormaPago" runat="server" Text="Pago Mxn:" />
-                                    <asp:DropDownList ID="DDLFormaPago" runat="server" OnPreRender="DDLFormaPago_PreRender" />
+                                    <asp:DropDownList ID="DDLFormaPago" runat="server"    />
                                 </div>
                                 <div>
                                     <asp:Label ID="lbClienteReferenciaPago" AssociatedControlId="txtClienteReferenciaPago" runat="server" Text="Referencia:" />
@@ -592,6 +611,7 @@
                     <asp:AsyncPostBackTrigger ControlID="txtBusquedaArticulo" EventName="TextChanged" />
                     <asp:AsyncPostBackTrigger ControlID="CheckBox1" EventName="CheckedChanged" />
                     <asp:AsyncPostBackTrigger ControlID="GridViewClientes" EventName="RowCommand" />
+                    <asp:AsyncPostBackTrigger ControlID="DDLFormaPago" EventName="TextChanged" />
                 </Triggers>
             </asp:UpdatePanel>
              <asp:Label ID="LbIvaNumero" runat="server"  Visible="false" ></asp:Label>
