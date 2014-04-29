@@ -60,6 +60,13 @@
            modalWin.ShowURL('Cerrar.aspx', 150, 400, 'Enviando Correo', null, callbackFunctionArray);
         }
     </script>
+          <script type="text/javascript">
+              function PaginaPrevPdf() {
+
+                  window.open("CreaPdfPre.aspx", "cal", "scrollbars=no,menubar=no,status=no,width=500 top=500,left=500,top=-300,right=0,height=650,resizable=yes");
+              }
+
+</script>
 </head>
 <body>
     <form id="formVisualizaFactura" runat="server">
@@ -101,6 +108,9 @@
                                     <div class="filas">
                                         <asp:Label ID="LbRfcUsuario0" runat="server" CssClass="negritas" Text="RFC" />
                                         <asp:Label ID="LbRfcUsuario" runat="server" />
+                                    </div>
+                                     <div class="filas">
+                                    <asp:Label ID="LbRazonSocial" runat="server" CssClass="negritas" Text="Razon Social"></asp:Label>
                                     </div>
                                 </div>
                             </div>
@@ -264,14 +274,14 @@
                                     <asp:BoundField DataField="Articulo_id" HeaderStyle-CssClass="oculto">
                                         <ItemStyle Width="0px" Font-Size="0px" CssClass="oculto" />
                                     </asp:BoundField>
-                                    <asp:BoundField DataField="Articulo_cantidad" HeaderText="Articulo Cantidad" />
+                                    <asp:BoundField DataField="Articulo_cantidad" HeaderText="Cantidad" />
                                     <asp:BoundField DataField="Presenta_Cod" HeaderText="U/M" />
                                     <asp:BoundField DataField="Articulo_codigo" HeaderText="Codigo" />
                                     <asp:BoundField DataField="Articulo_nombre" HeaderText="Descripcion" />
-                                    <asp:BoundField DataField="FDetalle_Preciopublico" HeaderText="Precio Unitario" />
-                                    <asp:BoundField DataField="FDetalle_Iva" HeaderText="Iva Articulo" />
-                                    <asp:BoundField DataField="FDetalle_Ieps" HeaderText="Ieps Articulo" />
-                                    <asp:BoundField DataField="Importe" HeaderText="Importe Total" />
+                                    <asp:BoundField DataField="FDetalle_Preciopublico" HeaderText="Precio" />
+                                    <asp:BoundField DataField="FDetalle_Iva" HeaderText="Iva " />
+                                    <asp:BoundField DataField="FDetalle_Ieps" HeaderText="Ieps " />
+                                    <asp:BoundField DataField="Importe" HeaderText=" Total" />
                                     <asp:BoundField DataField="Comentario" HeaderText="Comentario" 
                                         NullDisplayText="No comentario" />
                                     <asp:BoundField DataField="TipoCambio" HeaderText="TIPO DE CAMBIO"  HeaderStyle-CssClass="oculto"  >
@@ -399,7 +409,7 @@
                         </div>
                         <div class="filas">
                             <div class="guardar">
-                                <asp:LinkButton ID="LinkButtonDownloadPdf" runat="server" Text="Previsualizar PDF"  OnClick="LinkButton1_Click" />
+                                <asp:LinkButton ID="LinkButtonDownloadPdf" runat="server" Text="Previsualizar PDF"  OnClick="LinkButton1_Click" OnClientClick="PaginaPrevPdf()"  />
                             </div>
                             <div class="guardar">
                                 <asp:LinkButton ID="btnMensajeTimbrar" runat="server" Text="Timbrar" OnClientClick="return ShowMessageWithAction()" />
