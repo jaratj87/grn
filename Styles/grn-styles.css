@@ -1492,7 +1492,7 @@ legend {
 	display: block;
 	margin: 0 auto 20px;
 	overflow: auto;
-	width: 100%;
+	width: 96%;
 }
 
 #MenuDatosFactura {
@@ -1509,11 +1509,11 @@ legend {
 }
 
 #MenuDatosFactura .resultados {
+	display: inline-block;
 	float: right;
 	padding-right: 15px;
-	margin-top: 75px;
+	margin: 75px 0 0 40px;
 	text-align: right;
-	width: 18%;
 }
 
 #MenuDatosFactura .monedaref {
@@ -1553,10 +1553,10 @@ legend {
 }
 
 #MenuDatosFactura .gravables {
-	float: left;
-	margin-top: 95px;
+	display: inline-block;
+	float: right;
+	margin-top: 75px;
 	text-align: right;
-	width: 48%;
 }
 
 #Div_InfoArticulos .guardar {
@@ -1802,4 +1802,57 @@ legend {
     display: inline-block;
     margin-top: 20px;
     text-align: center;
+}
+
+/* Pantalla 09 - Pago de Timbres */
+
+.botonespago {
+	display: inline-block;
+	margin: 0 auto 15px;
+	width: 100%;
+}
+
+.botonespago label {
+	display: block;
+	float: left;
+	margin: 6px 20px 0 0;
+	text-align: right;
+	width: 55%;
+}
+
+.botonespago .btnpago {
+	-moz-border-radius: 5px;
+	-ms-border-radius: 5px;
+	-o-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	border: 1px solid #ccc;
+	float: left;
+	margin-right: 15px;
+	text-align: center;
+	width: 23%;
+}
+
+.botonespago .btnpago:last-child {
+	margin-right: 0px;
+}
+
+.btnpago h2 {
+	margin: 10px 0;
+	font-size: 1.3em;
+}
+
+.btnpago .precio {
+	background: #DC4A2D;
+	color: #fff;
+	display: block;
+	font-size: 2.5em;
+	font-weight: bold;
+	padding: 10px 0;
+	width: 100%;
+}
+
+.btnpago .cfolios {
+	margin: 25px 0;
+	font-size: 1.2em;
 }

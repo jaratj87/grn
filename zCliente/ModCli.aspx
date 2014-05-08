@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="AddClient.aspx.cs" Inherits="AddClient" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="ModCli.aspx.cs" Inherits="ModCli" %>
 <!DOCTYPE html>
 <%@ Register TagPrefix="My" TagName="UserInfoBoxControl" Src="~/Zwebcontrols/WebUserControlMenuUser.ascx" %>
 <%@  Register TagPrefix="Me" TagName="UserInfoBoxFooter" Src="~/Zwebcontrols/footer.ascx"%>
@@ -16,31 +16,31 @@
         switch (valorSpan) {
             case "1":
                 $("#Wizard1_sideBarList_sideBarButton_0").addClass("activo");
-                $("#Wizard1_sideBarList_sideBarButton_1").addClass("");
-                $("#Wizard1_sideBarList_sideBarButton_2").addClass("");
-                $("#Wizard1_sideBarList_sideBarButton_3").addClass("");
-                $("#Wizard1_sideBarList_sideBarButton_4").addClass("");
+                $("#Wizard1_sideBarList_sideBarButton_1").addClass("1");
+                $("#Wizard1_sideBarList_sideBarButton_2").addClass("1");
+                $("#Wizard1_sideBarList_sideBarButton_3").addClass("1");
+                $("#Wizard1_sideBarList_sideBarButton_4").addClass("1");
                 break;
             case "2":
                 $("#Wizard1_sideBarList_sideBarButton_0").addClass("activo");
                 $("#Wizard1_sideBarList_sideBarButton_1").addClass("activo");
                 $("#Wizard1_sideBarList_sideBarButton_2").addClass("");
                 $("#Wizard1_sideBarList_sideBarButton_3").addClass("");
-                $("#Wizard1_sideBarList_sideBarButton_4").addClass("");
+                $("#Wizard1_sideBarList_sideBarButton_4").addClass("1");
                 break;
             case "3":
                 $("#Wizard1_sideBarList_sideBarButton_0").addClass("activo");
                 $("#Wizard1_sideBarList_sideBarButton_1").addClass("activo");
                 $("#Wizard1_sideBarList_sideBarButton_2").addClass("activo");
                 $("#Wizard1_sideBarList_sideBarButton_3").addClass("");
-                $("#Wizard1_sideBarList_sideBarButton_4").addClass("");
+                $("#Wizard1_sideBarList_sideBarButton_4").addClass("1");
                 break;
             case "4":
                 $("#Wizard1_sideBarList_sideBarButton_0").addClass("activo");
                 $("#Wizard1_sideBarList_sideBarButton_1").addClass("activo");
                 $("#Wizard1_sideBarList_sideBarButton_2").addClass("activo");
                 $("#Wizard1_sideBarList_sideBarButton_3").addClass("activo");
-                $("#Wizard1_sideBarList_sideBarButton_4").addClass("");
+                $("#Wizard1_sideBarList_sideBarButton_4").addClass("1");
                 break;
             case "5":
                 $("#Wizard1_sideBarList_sideBarButton_0").addClass("activo");
@@ -60,9 +60,12 @@
             <h1 id="tituloPagina" runat="server"><i class="fa fa-users"></i> Registrar Cliente</h1>
             <div id="DivmensajeError">
                 <asp:Label ID="Lberror" runat="server" CssClass="errores" />
-                <asp:Label id="LbIndice" runat="server" class="oculto">0</asp:Label>
+                <asp:Label id="LbIndice" runat="server" class="oculto">0</asp:Label> 
             </div>
-            <asp:Wizard ID="Wizard1" runat="server" CssClass="wizardContainer" OnFinishButtonClick="Wizard1_FinishButtonClick" OnNextButtonClick="Wizard1_NextButtonClick" OnPreviousButtonClick="Wizard1_PreviousButtonClick" onsidebarbuttonclick="Wizard1_SideBarButtonClick" SkipLinkText="">
+            <asp:Wizard ID="Wizard1" runat="server" CssClass="wizardContainer" 
+                OnFinishButtonClick="Wizard1_FinishButtonClick"   SkipLinkText="" 
+                onnextbuttonclick="Wizard1_NextButtonClick" 
+                onpreviousbuttonclick="Wizard1_PreviousButtonClick">
                 <LayoutTemplate>
                     <div class="titulos">
                         <asp:PlaceHolder id="headerPlaceHolder" runat="server" />
@@ -104,12 +107,11 @@
                             </div>
                             <div>
                                 <asp:Label ID="lbClienteCod" AssociatedControlId="txtClienteCod" runat="server" Text="Codigo:" />
-                                <asp:CheckBox ID="CbCOD" runat="server" AutoPostBack="True" OnCheckedChanged="CbCOD_CheckedChanged" ToolTip="Click para cambiar el codigo del articulo" />
                                 <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="*" ControlToValidate="txtClienteCod" ToolTip="Campo requerido" CssClass="txterror"></asp:RequiredFieldValidator>
-                                <asp:TextBox ID="txtClienteCod" runat="server" ToolTip="Este campo permite Para hacer busquedas mas rapidas" Disabled="true" />
+                                <asp:TextBox ID="txtClienteCod" runat="server" ToolTip="Este campo permite Para hacer busquedas mas rapidas"  />
                             </div>
                             <div>
-                                <asp:Label ID="lbClienteNombre" AssociatedControlId="txtClienteNombre" runat="server" Text="Nombre:" />
+                                <asp:Label ID="lbClienteNombre" AssociatedControlId="txtClienteNombre" runat="server" Text="Razón Social:" />
                                 <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="txtClienteNombre" ErrorMessage="*" ToolTip="Campo requerido" CssClass="txterror"></asp:RequiredFieldValidator>
                                 <asp:TextBox ID="txtClienteNombre" runat="server" />
                             </div>
@@ -156,13 +158,13 @@
                             </div>
                             <div class="trescol">
                                 <div>
-                                    <asp:Label ID="lbClienteEstado" AssociatedControlId="DDEstado" runat="server" Text="Estado:" />
+                                    <asp:Label ID="lbClienteEstado" AssociatedControlId="DDEstado"  runat="server" Text="Estado:"  OnLoad="DDEstado_PreRender1"/>
                                     <asp:DropDownList ID="DDEstado" runat="server">
                                         <asp:ListItem>Seleccione...</asp:ListItem>
                                     </asp:DropDownList>
                                 </div>
                                 <div>
-                                    <asp:Label ID="lbClientepais" AssociatedControlId="DDPais" runat="server" Text="Pais:" />
+                                    <asp:Label ID="lbClientepais" AssociatedControlId="DDPais" runat="server" Text="Pais:" OnLoad="DDPais_PreRender" />
                                     <asp:DropDownList ID="DDPais" runat="server">
                                         <asp:ListItem>Seleccione...</asp:ListItem>
                                     </asp:DropDownList>
@@ -182,7 +184,7 @@
                             <div class="doscol">
                                 <div>
                                     <asp:Label ID="lbClienteFormaPago" AssociatedControlId="DDLFormaPago" runat="server" Text="Pago Mxn:" />
-                                    <asp:DropDownList ID="DDLFormaPago" runat="server" OnPreRender="DDLFormaPago_PreRender" />
+                                    <asp:DropDownList ID="DDLFormaPago" runat="server" OnLoad="DDLFormaPago_PreRender" OnPreRender="DDLFormaPago_PreRender" />
                                 </div>
                                 <div>
                                     <asp:Label ID="lbClienteReferenciaPago" AssociatedControlId="txtClienteReferenciaPago" runat="server" Text="Referencia:" />
@@ -192,7 +194,7 @@
                             <div class="doscol">
                                 <div>
                                     <asp:Label ID="lbClienteFormaPagoDlls" AssociatedControlId="DDLFormaPagoDlls" runat="server" Text="Pago Dlls:" />
-                                    <asp:DropDownList ID="DDLFormaPagoDlls" runat="server" OnPreRender="DDLFormaPagoDlls_PreRender" />
+                                    <asp:DropDownList ID="DDLFormaPagoDlls" runat="server"  OnLoad="DDLFormaPagoDlls_PreRender" />
                                 </div>
                                 <div>
                                     <asp:Label ID="lbClienteRefereciaPagoDlls" AssociatedControlId="txtClienteReferenciaPagoDlls" runat="server" Text="Referencia:" />
@@ -208,7 +210,8 @@
                                     </asp:DropDownList>
                                 </div>
                                 <div>
-                                    <asp:CheckBox ID="CBRetencion" runat="server" Text="Retencion:" />
+                                    <asp:CheckBox ID="CBRetencion" runat="server" Text="Retencion IVA" />
+                                    <asp:CheckBox ID="CBRetencionIsr" runat="server" Text="Retencion ISR" />
                                 </div>
                             </div>
                         </fieldset>
@@ -239,6 +242,12 @@
                     </asp:WizardStep>
                 </WizardSteps>
             </asp:Wizard>
+                 <div class="guardar" >
+                 <div class="botoneraActualiza">
+                    <asp:LinkButton ID="BtnActulizaCliente" runat="server" 
+                         onclick="ImageButton2_Click" Font-Size="Medium" >Finalizar</asp:LinkButton>
+                    </div>
+                </div>
         </div>
         <div class="colright">
             <Mr:UserInfoBoxMenuRapido ID="UserInfoBoxMenuRapido" runat="server" />
