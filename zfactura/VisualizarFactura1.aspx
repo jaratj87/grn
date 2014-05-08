@@ -22,9 +22,7 @@
 
         }
         function Action1() {
-            //            alert('Action1 is excuted');
             $('#BtnTimbrar').trigger('click');
-            //            modalWin.HideModalPopUp();
         }
         function Action1Correo() {
             $('#BtnEnviaCorreo').trigger('click');
@@ -51,19 +49,20 @@
             modalWin.ShowMessage(msg, 200, 400, 'User Information', null, null);
         }
         function ShowMessageWithAction() {
-            //ShowConfirmationMessage(message, height, width, title,onCloseCallBack, firstButtonText, onFirstButtonClick, secondButtonText, onSecondButtonClick);
             modalWin.ShowConfirmationMessage('¿     Desea Timbrar Este Documento?', 200, 400, 'Importante', null, 'Aceptar', Action1, 'Cancelar', Action2);
         }
         function ShowMessageWithActionCorreo() {
             var text1 = $('#<%=LbCorreoCliente.ClientID%>').html();
-            modalWin.ShowConfirmationMessage('¿ Desea enviar esta factura al cliente con los   correo(os) registrado(os) ' + text1 + '?', 200, 650, 'Importante', null, 'Aceptar', Action1Correo, 'Cancelar', Action2);
-           modalWin.ShowURL('Cerrar.aspx', 150, 400, 'Enviando Correo', null, callbackFunctionArray);
+            modalWin.ShowConfirmationMessage(' <div id="cont">¿ Desea enviar esta factura al cliente con los   correo(os) registrado(os) ?' + ' <div id="DivOverSellodigitalCfdi2" runat="server" style=" overflow: auto; width: 582px;">' + text1 + ' </div></div>', 250, 700, 'Importante', null, 'Aceptar', Action1Correo, 'Cancelar', Action2);
+           modalWin.ShowURL('Cerrar.aspx', 200, 500, 'Enviando Correo', null, callbackFunctionArray);
         }
     </script>
           <script type="text/javascript">
               function PaginaPrevPdf() {
 
-                  window.open("CreaPdfPre.aspx", "cal", "scrollbars=no,menubar=no,status=no,width=500 top=500,left=500,top=-300,right=0,height=650,resizable=yes");
+                                    window.open("CreaPdfPre.aspx", "cal", "scrollbars=no,menubar=no,status=no,width=500 top=500,left=500,top=-300,right=0,height=650,resizable=yes");
+//                  window.open("CreaPdfPreArrendamiento.aspx", "cal", "scrollbars=no,menubar=no,status=no,width=500 top=500,left=500,top=-300,right=0,height=650,resizable=yes");
+                  
               }
 
 </script>
@@ -80,18 +79,19 @@
                         <div class="filas">
                             <div class="botonesup">
                                 <div class="guardar">
-                                    <asp:LinkButton ID="LinkButtonDownloadPdf_Up" runat="server" Text="Previsualizar PDF" OnClick="LinkButton1_Click" />
+                                    <asp:LinkButton ID="LinkButtonDownloadPdf_Up" runat="server" Text="Previsualizar PDF"  OnClick="LinkButton1_Click" OnClientClick="PaginaPrevPdf()" />
                                 </div>
                                 <div class="guardar">
-                                    <asp:LinkButton ID="btnMensajeTimbrar_Up" runat="server" Text="Timbrar" OnClientClick="return ShowMessageWithAction()" />
+                                    <asp:LinkButton ID="btnMensajeTimbrar_Up" runat="server" Text="Timbrar" 
+                                        onclick="btnMensajeTimbrar_Up_Click" />
                                 </div>
                                 <div id="DivBtnMensajeCorreo_Up" runat="server" class="guardar" >
-                                    <asp:LinkButton ID="BtnMensajeCorreo_Up" runat="server" Text="Mandar por correo"   OnClientClick="return ShowMessageWithActionCorreo()" />
+                                    <asp:LinkButton ID="BtnMensajeCorreo_Up" runat="server" Text="Mandar por correo"    />
                                 </div>
                             </div>
                             <div class="estatus">
                                 <asp:Label ID="Label80" runat="server" CssClass="negritas" Text="Estatus:" />
-                                <asp:Label ID="LbStatusFactura" runat="server" Text="Estatus:" CssClass="statustimbrada" />
+                                <asp:Label ID="LbStatusFactura" runat="server" Text="Estatus:"  />
                             </div>
                         </div>
                     </div>
@@ -158,25 +158,25 @@
                                 <asp:Label ID="Label4" runat="server" Text="Folio Fiscal:" />
                             </div>
                             <div class="filas">
-                                <asp:Label ID="LbFolioFiscal" runat="server" Text="1E87A73E-7E57-41FE-B477-16CD9E3D8757" />
+                                <asp:Label ID="LbFolioFiscal" runat="server" Text="No asignado" />
                             </div>
                             <div class="filas naranja">
                                 <asp:Label ID="Label62" runat="server" Text="No. de Serie del Certificado del SAT:" />
                             </div>
                             <div class="filas">
-                                <asp:Label ID="LbCertificadoSat" runat="server" Text="Falta" />
+                                <asp:Label ID="LbCertificadoSat" runat="server" Text="No asignado" />
                             </div>
                             <div class="filas naranja">
                                 <asp:Label ID="Label63" runat="server" Text="Fecha y hora de certificacion:" />
                             </div>
                             <div class="filas">
-                                <asp:Label ID="LbHoraCertificado" runat="server" Text="Falta" />
+                                <asp:Label ID="LbHoraCertificado" runat="server" Text="No asignado" />
                             </div>
                             <div class="filas naranja">
                                 <asp:Label ID="Label64" runat="server" Text="No. de Serie del Certificado del CSD:" />
                             </div>
                             <div class="filas">
-                                <asp:Label ID="LbCertificadocsd" runat="server" Text="Falta" />
+                                <asp:Label ID="LbCertificadocsd" runat="server" Text="No asignado" />
                             </div>
                             <div id="LUExp" runat="server" class="filas naranja">
                                 <asp:Label ID="Label65" runat="server" Text="Lugar de Expedición:" />
@@ -279,9 +279,13 @@
                                     <asp:BoundField DataField="Articulo_codigo" HeaderText="Codigo" />
                                     <asp:BoundField DataField="Articulo_nombre" HeaderText="Descripcion" />
                                     <asp:BoundField DataField="FDetalle_Preciopublico" HeaderText="Precio" />
-                                    <asp:BoundField DataField="FDetalle_Iva" HeaderText="Iva " />
-                                    <asp:BoundField DataField="FDetalle_Ieps" HeaderText="Ieps " />
-                                    <asp:BoundField DataField="Importe" HeaderText=" Total" />
+                                    <asp:BoundField DataField="FDetalle_Iva" HeaderText="Iva "  HeaderStyle-CssClass="oculto">
+                                     <ItemStyle  CssClass="oculto" />
+                                    </asp:BoundField>
+                                    <asp:BoundField DataField="FDetalle_Ieps" HeaderText="Ieps " HeaderStyle-CssClass="oculto">
+                                             <ItemStyle  CssClass="oculto" />
+                                    </asp:BoundField>
+                                    <asp:BoundField DataField="Importe" HeaderText=" Importe" />
                                     <asp:BoundField DataField="Comentario" HeaderText="Comentario" 
                                         NullDisplayText="No comentario" />
                                     <asp:BoundField DataField="TipoCambio" HeaderText="TIPO DE CAMBIO"  HeaderStyle-CssClass="oculto"  >
@@ -313,32 +317,30 @@
                         </div>
                         <div class="filas">
                             <div id="DivDerecha" class="totales">
+                                <asp:Label ID="lbSiIva" runat="server" CssClass="oculto" />
+                                <asp:Label ID="lbSiRisr" runat="server" CssClass="oculto" />
+                                <asp:Label ID="LbRetencionIvaValor" runat="server" Text="False" CssClass="oculto" />
+                                <asp:Label ID="LbRetencionIsrFactor" runat="server" CssClass="oculto" />
                                 <div class="leyendas">
                                     <asp:Label ID="Label68" runat="server" CssClass="negritas" Text="Subtotal: $" />
                                     <asp:Label ID="Label3" runat="server" CssClass="negritas" Text="Ieps: $" />
                                     <asp:Label ID="LbivaFactor" runat="server" CssClass="negritas" Text="Ivafactor" />
-                                    <asp:Label ID="lbSiIva" runat="server" CssClass="oculto" />
-                                    <asp:Label ID="lblRi" runat="server" CssClass="negritas" Text="Retencion Iva: $" />
-
-                                    <asp:Label ID="lbSiRisr" runat="server" CssClass="oculto" />
+                                    <asp:Label ID="lblRi" runat="server"  Visible="false" CssClass="negritas" Text="Retencion Iva: $" />
                                     <asp:Label ID="LbRetencionIsrValor" runat="server" CssClass="negritas" />
-                                                  <asp:Label ID="lbSiRV" runat="server" CssClass="negritas" Visible="false" />
-                                <asp:Label ID="LblRetencionVenta" runat="server" CssClass="negritas" Text="Retencion Venta:" Visible="False" />
-                                <asp:Label ID="LbRetencionVentavalor" runat="server" CssClass="negritas" Visible="False" />
+                                    <asp:Label ID="lbSiRV" runat="server" CssClass="negritas" Visible="false" />
+                                    <asp:Label ID="LblRetencionVenta" runat="server" CssClass="negritas" Text="Retencion Venta:"
+                                        Visible="False" />
+                                    <asp:Label ID="LbRetencionVentavalor" runat="server" CssClass="negritas" Visible="False" />
                                     <asp:Label ID="Label71" runat="server" CssClass="negritas" Text="Total: $" />
-                                
                                 </div>
                                 <div class="cantidades">
                                     <asp:Label ID="LbSubtotal" runat="server" Text="Fallo" />                  
-                                    <asp:Label ID="LbIepsDinero" runat="server" Text="0" />
-                                                                      
-                                    <asp:Label ID="LbIvaDinero" runat="server" Text="Fallo" />
-                                    <asp:Label ID="LbRetencionIvaValor" runat="server" Text="False" CssClass="oculto"  />
-                                    <asp:Label ID="LbRetencionIsrFactor" runat="server" CssClass="oculto"/>
-                                    <asp:Label ID="LbretencionIvaDinero" runat="server" Text="0" />
-                                    <asp:Label ID="LbRetencionIsrDinero" runat="server" Text="0" />
-                                         <asp:Label ID="LbTotal" runat="server" Text="Fallo" />
-                                   
+                                    <asp:Label ID="LbIepsDinero" runat="server" Text="0" />            
+                                    <asp:Label ID="LbIvaDinero" runat="server" Text="Fallo"  />
+                                    <asp:Label ID="LbretencionIvaDinero" runat="server" Text="0"  Visible="false"/>
+                                    <asp:Label ID="LbRetencionIsrDinero"  runat="server" Text="0" Visible="false"  />
+                                    <asp:Label ID="LbRetencionVentaDinero" runat="server" Text="0" Visible="False" />
+                                    <asp:Label ID="LbTotal" runat="server" Text="Fallo" />                                   
                                 </div>
                             </div>
                             <div id="DivsIvas" runat="server" class="totales">
@@ -356,7 +358,6 @@
                             <div Id="DivRetenciones" runat="server" class="totales">
                          
                                 <asp:Label ID="LbretencionIvaFactor" runat="server" CssClass="negritas" Visible="False" />
-                                <asp:Label ID="LbRetencionVentaDinero" runat="server" Text="0" Visible="False" /><br />
                                 
                             </div>
                         </div>
@@ -412,13 +413,13 @@
                                 <asp:LinkButton ID="LinkButtonDownloadPdf" runat="server" Text="Previsualizar PDF"  OnClick="LinkButton1_Click" OnClientClick="PaginaPrevPdf()"  />
                             </div>
                             <div class="guardar">
-                                <asp:LinkButton ID="btnMensajeTimbrar" runat="server" Text="Timbrar" OnClientClick="return ShowMessageWithAction()" />
+                                <asp:LinkButton ID="btnMensajeTimbrar" runat="server" Text="Timbrar" onclick="btnMensajeTimbrar_Up_Click" />
                             </div>
                             <div id="DivBtnMensajeCorreo" runat="server" class="guardar" >
                                 <asp:LinkButton ID="BtnMensajeCorreo" runat="server" Text="Mandar por correo"   OnClientClick="return ShowMessageWithActionCorreo()" />
                             </div>
                             <div>
-                                <asp:Button ID="BtnTimbrar" runat="server" OnClick="BtnTimbrar_Click" Text="Button" Style="display: none" />
+                                <asp:Button ID="BtnTimbrar" runat="server" OnClick="BtnTimbrar_Click" Text="Button" Style="display:none " />
                             </div>
                             <div>
                                 <asp:Button ID="BtnEnviaCorreo" runat="server" Text="Button" OnClick="BtnEnviaCorreo_Click" Style="display: none" />
