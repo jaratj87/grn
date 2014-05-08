@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="AltaEmpresas.aspx.cs" Inherits="AltaEmpresas" EnableEventValidation="false" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="ModEmp.aspx.cs" Inherits="ModEmp" %>
 <!DOCTYPE html>
 <%@ Register TagPrefix="My" TagName="UserInfoBoxControl" Src="~/Zwebcontrols/WebUserControlMenuUser.ascx" %>
 <%@  Register TagPrefix="Me" TagName="UserInfoBoxFooter" Src="~/Zwebcontrols/footer.ascx"%>
@@ -17,7 +17,7 @@
             case "1":
                 $("#Wizard1_sideBarList_sideBarButton_0").addClass("activo");
                 $("#Wizard1_sideBarList_sideBarButton_1").addClass("");
-                $("#Wizard1_sideBarList_sideBarButton_2").addClass("");
+                $("#Wizard1_sideBarList_SideBarButton_2").addClass("");
                 $("#Wizard1_sideBarList_sideBarButton_3").addClass("");
                 $("#Wizard1_sideBarList_sideBarButton_4").addClass("");
                 break;
@@ -62,7 +62,10 @@
                 <asp:Label ID="Lberror" runat="server" CssClass="errores" />
                 <asp:Label id="LbIndice" runat="server" class="oculto">0</asp:Label>
             </div>
-            <asp:Wizard ID="Wizard1" runat="server" CssClass="wizardContainer" OnFinishButtonClick="Wizard1_FinishButtonClick" OnNextButtonClick="Wizard1_NextButtonClick" OnPreviousButtonClick="Wizard1_PreviousButtonClick" onsidebarbuttonclick="Wizard1_SideBarButtonClick" SkipLinkText="">
+            <asp:Wizard ID="Wizard1" runat="server" CssClass="wizardContainer" 
+                OnFinishButtonClick="Wizard1_FinishButtonClick" 
+                OnNextButtonClick="Wizard1_NextButtonClick"   SkipLinkText="" 
+                onpreviousbuttonclick="Wizard1_PreviousButtonClick">
                 <LayoutTemplate>
                     <div class="titulos">
                         <asp:PlaceHolder id="headerPlaceHolder" runat="server" />
@@ -92,13 +95,6 @@
                 </SideBarTemplate>
                 <NavigationButtonStyle />
                 <WizardSteps>
-                    <asp:WizardStep runat="server" Title="Bienvenido" ID="HInformacion">
-                        <div id="Info">
-                            <legend>
-                                <asp:Label ID="LbTitulo" runat="server" Text="Bienvenido al registro de tu Empresa" />
-                            </legend>
-                        </div>
-                    </asp:WizardStep>
                     <asp:WizardStep ID="HPaso1" runat="server" Title="La empresa">
                         <fieldset>
                             <legend>
@@ -111,16 +107,11 @@
                             </div>
                             <div>
                                 <asp:Label ID="Label1" runat="server" Text="Régimen Fiscal:" AssociatedControlID="DLRegimenFiscal"></asp:Label>
-                                <asp:DropDownList ID="DLRegimenFiscal" class="regimen" runat="server">
-                                    <asp:ListItem>Régimen Fiscal General de Ley Personas Físicas con Actividades Empresariales</asp:ListItem>
-                                    <asp:ListItem>Régimen Fiscal General de Ley Personas Físicas con Actividades Empresariales y Profesionales</asp:ListItem>
-                                    <asp:ListItem>Régimen Fiscal General de Ley Personas Morales</asp:ListItem>
-                                    <asp:ListItem>Régimen de Arrendamiento</asp:ListItem>
-                                    <asp:ListItem>Honorarios</asp:ListItem>
+                                <asp:DropDownList ID="DLRegimenFiscal" class="regimen" runat="server"  OnPreRender="DLRegimenFiscal_PreRender" >
                                 </asp:DropDownList>
                             </div>
                             <div>
-                                <asp:Label ID="lbEmpresa" AssociatedControlID="txtEmpresa" runat="server" Text="Nombre:" />
+                                <asp:Label ID="lbEmpresa" AssociatedControlID="txtEmpresa" runat="server" Text="Razón Social:" />
                                 <asp:RequiredFieldValidator ID="RFVRFC0" runat="server" ControlToValidate="txtEmpresa" ErrorMessage="*" CssClass="txterror">Captura el nombre de la Empresa</asp:RequiredFieldValidator>
                                 <asp:TextBox runat="server" ToolTip="Nombre de la empresa" ID="txtEmpresa" />
                             </div>
@@ -161,21 +152,21 @@
                                 </div>
                                 <div>
                                     <asp:Label ID="lbClienteEstado" AssociatedControlID="DDEstado" runat="server" Text="Estado:" />
-                                    <asp:DropDownList ID="DDEstado" runat="server" CssClass="estado">
+                                    <asp:DropDownList ID="DDEstado" runat="server" CssClass="estado"  OnPreRender="DDEstado_PreRender">
                                     </asp:DropDownList>
                                 </div>
                             </div>
                             <div class="doscol">
                                 <div>
                                     <asp:Label ID="lbPais" AssociatedControlID="DDPais" runat="server" Text="País:" />
-                                    <asp:DropDownList ID="DDPais" runat="server">
+                                    <asp:DropDownList ID="DDPais"  runat="server" OnPreRender="DDPais_PreRender">
                                         <asp:ListItem Value="0">Selecciona...</asp:ListItem>
                                     </asp:DropDownList>
                                 </div>
                                 <div class="wizmoneda">
                                     <asp:Label ID="LbMoneda" AssociatedControlID="DDmoneda" runat="server" Text="Moneda:" />
                                     <asp:Label ID="lbClienteEstado0" runat="server" Text="(Moneda prederterminada para facturar)" CssClass="leyenda" />
-                                    <asp:DropDownList ID="DDmoneda" runat="server" ToolTip="Moneda predeterminada para Facturar">
+                                    <asp:DropDownList ID="DDmoneda" runat="server" OnPreRender="DDmoneda_PreRender" ToolTip="Moneda predeterminada para Facturar">
                                         <asp:ListItem Value="P">Pesos</asp:ListItem>
                                         <asp:ListItem Value="D">Dólares</asp:ListItem>
                                     </asp:DropDownList>
@@ -273,6 +264,12 @@
                     </asp:WizardStep>
                 </WizardSteps>
             </asp:Wizard>
+            <div class="guardar">
+                <div class="botoneraActualiza">
+                    <asp:LinkButton ID="BtnActulizaEmpresa" runat="server" Font-Size="Medium" 
+                        onclick="BtnActulizaEmpresa_Click">Finalizar</asp:LinkButton>
+                </div>
+            </div>
         </div>
         <div class="colright">
             <Mr:UserInfoBoxMenuRapido ID="UserInfoBoxMenuRapido" runat="server" />
